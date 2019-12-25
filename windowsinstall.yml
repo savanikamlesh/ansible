@@ -10,12 +10,8 @@
   tasks:
     - name: Install Firefox
       win_chocolatey:
-        name: firefox
+        name: 
+        - firefox
+        - procexp
+        - windirstat
         state: present
-    - name: Install multiple packages
-      win_chocolatey:
-      name:
-      - procexp
-      - putty
-      - windirstat
-         state: present
