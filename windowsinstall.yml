@@ -15,4 +15,11 @@
         - procexp
         - windirstat
         - javaruntime
+        - googlechrome
+        - vcredist140
+        - autohotkey.portable
+        - ccleaner
+        - winlogbeat
+        - malwarebytes
+        - autoruns
         state: present
