@@ -6,17 +6,16 @@
 
 - name:  Windows Update
   hosts: all
-  gather_facts: false
+  gather_facts: true
   tasks:
     - name: Install Firefox
       win_chocolatey:
         name: firefox
         state: present
- 
-- name: Install multiple packages
-  win_chocolatey:
-    name:
-    - procexp
-    - putty
-    - windirstat
-    state: present
+    - name: Install multiple packages
+      win_chocolatey:
+      name:
+      - procexp
+      - putty
+      - windirstat
+         state: present
