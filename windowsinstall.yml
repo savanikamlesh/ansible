@@ -13,3 +13,10 @@
         name: firefox
         state: present
  
+- name: Install multiple packages
+  win_chocolatey:
+    name:
+    - procexp
+    - putty
+    - windirstat
+    state: present
