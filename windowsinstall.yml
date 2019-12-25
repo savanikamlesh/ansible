@@ -12,6 +12,4 @@
       win_chocolatey:
         name: firefox
         state: present
-    -name: Install chocolate
-  win_shell: https://chocolatey.org/install.ps1
-  state: present
+ 
