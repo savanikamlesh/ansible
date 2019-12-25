@@ -12,8 +12,6 @@
       win_chocolatey:
         name: firefox
         state: present
-    - name: Install git from a pre configured source (win_chocolatey_source)
-       win_chocolatey:
-        name: git
-       source: internal_repo
-  
+    -name: Install chocolate
+  win_shell: https://chocolatey.org/install.ps1
+  state: present
