@@ -12,5 +12,11 @@
       win_chocolatey:
         name: firefox
         state: present
+- name: install and pin Notepad++ at 7.6.3
+  win_chocolatey:
+    name: notepadplusplus
+    version: 7.6.3
+    pinned: yes
+    state: present
 
   
