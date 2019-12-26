@@ -22,4 +22,6 @@
         - winlogbeat
         - malwarebytes
         - autoruns
+        - keepass.install
+        - wsus-offline-update
         state: present
