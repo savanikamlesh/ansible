@@ -1,4 +1,4 @@
-  ---
+---
 tasks:
   - name: install windows feature AD-DS on DCs
     win_feature:
