@@ -34,10 +34,10 @@
     - name: Unarchives the zip file
       unarchive:
         src: C:\MobaXterm_Installer_v12.4.zip
-        dest: C:\MobaXterm_Installer_v12.4
+        dest: C:\temp
     
     - name: mobatek the zip file 
       win_package:
-        path: C:\MobaXterm_Installer_v12.4\MobaXterm_installer_12.4.msi
+        path: C:\temp\MobaXterm_installer_12.4.msi
         state: present
   
