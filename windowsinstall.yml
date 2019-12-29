@@ -34,7 +34,7 @@
     - name: Unarchives the zip file
       unarchive:
         src: C:\MobaXterm_Installer_v12.4.zip
-        dest: C:\temp
+        dest: /temp
     
     - name: mobatek the zip file 
       win_package:
