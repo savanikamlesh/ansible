@@ -26,4 +26,15 @@
         - wsus-offline-update
         state: present
 
-
+    win_get_url:
+    url: https://download.mobatek.net/1242019111120613/MobaXterm_Installer_v12.4.zip
+    dest: C:\temp\
+- name: Unarchives the zip file
+  unarchive:
+  src: C:\temp\MobaXterm_Installer_v12.4.zip
+  dest: C:\MobaXterm_Installer_v12.4
+  
+   win_package:
+    path: C:\MobaXterm_Installer_v12.4\MobaXterm_installer_12.4.msi
+    state: present
+  
