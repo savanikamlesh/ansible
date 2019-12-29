@@ -34,7 +34,7 @@
     - name: Unarchives the zip file
       win_unzip:
         src: C:\MobaXterm_Installer_v12.4.zip
-        dest: /temp
+        dest: C:\temp
         recurse: yes
         delete_archive: yes
         
