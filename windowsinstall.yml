@@ -32,10 +32,12 @@
         dest: C:\
     
     - name: Unarchives the zip file
-      unarchive:
+      win_unzip:
         src: C:\MobaXterm_Installer_v12.4.zip
         dest: /temp
-    
+        recurse: yes
+        delete_archive: yes
+        
     - name: mobatek the zip file 
       win_package:
         path: C:\temp\MobaXterm_installer_12.4.msi
