@@ -31,7 +31,8 @@
         dest: C:\Program Files
         recurse: yes
         delete_archive: yes
-   win_package:
+  -name: Install Mobaxtremok
+  win_package:
     path: C:\Program Files\MobaXterm_Installer_v12.4\MobaXterm_installer_12.4.msi
     state: present
 
