@@ -25,13 +25,13 @@
         - keepass.install
         - wsus-offline-update
         state: present
-  -name: Install Mobaxtrem
+  - name: Install Mobaxtrem
   win_unzip:
         src: https://download.mobatek.net/1242019111120613/MobaXterm_Portable_v12.4.zip
         dest: C:\Program Files
         recurse: yes
         #delete_archive: yes
-  -name: Install Mobaxtremok
+  - name: Install Mobaxtremok
   win_package:
     path: C:\Program Files\MobaXterm_Installer_v12.4\MobaXterm_installer_12.4.msi
     state: present
