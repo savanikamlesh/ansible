@@ -35,6 +35,7 @@
         - chocolateygui
         - microsoft-teams.install
         - visualstudio2019community
+        - office365business
         state: present
         
     #  - name: ensure mobatek is installed via win_package
