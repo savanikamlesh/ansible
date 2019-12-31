@@ -1,6 +1,9 @@
 - name: perform yum update / reboot server
   hosts: all
- 
+ remote_user: root
+  #become: true
+ # become_method: sudo
+ # become_user: root
   tasks:
         - name: Perform yum update of all packages
           yum:
