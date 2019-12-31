@@ -1,16 +1,14 @@
-- hosts: all
-  gather_facts: false
+- name: perform yum update / reboot server
+  hosts: all
+  remote_user: lnxcfg
+  become: true
+  become_method: sudo
+  become_user: root
  
- tasks:
-    - name: Perform yum update of all packages
-            yum:
+  tasks:
+        - name: Perform yum update of all packages
+          yum:
             name: '*'
             state: latest
-    
-    - name: Reboot server
-           command: /sbin/shutdown -r +1
-           ignore_errors: true     
-
-#  hosts: ucpl_linux
-  #become: true
- # become_method: sudo
+        - name: Reboot machine
+          reboot:
