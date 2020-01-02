@@ -4,17 +4,11 @@
 # http://docs.ansible.com/ansible/win_updates_module.html
 # https://docs.ansible.com/ansible/win_reboot_module.html
 
-  hosts: all
-  gather_facts: true  
- 
  - name: Collect only facts returned by facter
- 
+   hosts: all
+   gather_facts: true  
+  
   tasks:
- #   - debug: var=vars
- #   - debug: var=hostvars[inventory_hostname]
- 
-    setup:
-      gather_subset:
-      - '!all'
-      - '!any'
-      - facter
+   setup:
+   # - debug: var=vars
+   # - debug: var=hostvars[inventory_hostname]
