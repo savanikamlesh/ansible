@@ -6,7 +6,14 @@
 
 - name:  Windows Update
   hosts: all
-  gather_facts: true      
+  gather_facts: true  
+  
+  pre_tasks:
+      setup:
+      gather_subset: 'all'
+  
+
   tasks:
     - debug: var=vars
     - debug: var=hostvars[inventory_hostname]
+    
