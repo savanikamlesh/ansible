@@ -7,10 +7,7 @@
 - name:  Windows Update
   hosts: all
   gather_facts: true      
-
-  tasks:
-    setup:
-       register: ansible_facts
-       
-  -debug: item
-      with_dict: ansible_facts
+ 
+ tasks:
+    - debug: var=vars
+    - debug: var=hostvars[inventory_hostname]
