@@ -18,3 +18,7 @@
           shell: "sleep 5 && reboot" 
           async: 1 
           poll: 0
+
+        - name: wait for 10 seconds
+          pause:
+          seconds: 10
