@@ -21,4 +21,4 @@
 
         - name: wait for 10 seconds
           pause:
-          seconds: 10
+            seconds: 10
