@@ -12,7 +12,7 @@
  #   - debug: var=vars
  #   - debug: var=hostvars[inventory_hostname]
  
-    - setup:
+    setup:
       gather_subset:
       - '!all'
       - '!any'
