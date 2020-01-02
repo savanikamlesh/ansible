@@ -12,5 +12,5 @@
     setup:
        register: ansible_facts
        
-     debug: item
+  -debug: item
       with_dict: ansible_facts
