@@ -8,7 +8,7 @@
   hosts: all
   gather_facts: true      
  tasks:
-  - setup:
+    setup:
     register: ansible_facts
-  - debug: item
+ debug: item
     with_dict: ansible_facts
