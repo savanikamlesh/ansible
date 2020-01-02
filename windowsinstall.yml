@@ -7,8 +7,9 @@
 - name:  Windows Update
   hosts: all
   gather_facts: true      
- tasks:
+
+tasks:
     setup:
-    register: ansible_facts
+       register: ansible_facts
  debug: item
-    with_dict: ansible_facts
+      with_dict: ansible_facts
