@@ -1,0 +1,40 @@
+  - name: install epel-release
+    yum:
+      name: epel-release
+      state: latest
+      
+      update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+      pip3 install ansible
+      apt-get install docker.io
+      apt-get install npm
+npm install npm --global
+reboot
+pip3 install docker-compose
+mkdir /downloads
+cd /downloads
+git clone https://github.com/ansible/awx.git
+cd /downloads/awx/installer
+ansible-playbook -i inventory install.yml
+PLAY [Build and deploy AWX] *************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ******************************************************************************************************************************************************************************
+ok: [localhost]
+
+TASK [check_vars : include_tasks] *******************************************************************************************************************************************************************
+skipping: [localhost]
+
+TASK [check_vars : include_tasks] *******************************************************************************************************************************************************************
+included: /downloads/awx/installer/roles/check_vars/tasks/check_docker.yml for localhost
+
+TASK [check_vars : postgres_data_dir should be defined] *********************************************************************************************************************************************
+ok: [localhost] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+
+TASK [check_vars : host_port should be defined] *****************************************************************************************************************************************************
+ok: [localhost] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+
