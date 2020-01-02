@@ -14,7 +14,5 @@
             name: '*'
             state: latest
             
-  - name: restart system to reboot to newest kernel
-    shell: "sleep 5 && reboot"
-    async: 1
-    poll: 0
+        - name: restart system to reboot to newest kernel
+          shell: "sleep 5 && reboot" async: 1 poll: 0
