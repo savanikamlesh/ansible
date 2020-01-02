@@ -12,6 +12,8 @@
     - debug: var=vars
     - debug: var=hostvars[inventory_hostname]
   
-- name: Printing Facts Mate?
-      setup:
-      gather_subset: 'all'
+  setup:
+    gather_subset:
+      - '!all'
+      - '!any'
+      - facter
