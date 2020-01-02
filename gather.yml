@@ -14,3 +14,5 @@
   - debug:
       var: hostvars[inventory_hostname]
       var: ansible_distribution
+      var: ansible_all_ipv4_addresses
+      var: ansible_hostname
