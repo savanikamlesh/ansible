@@ -9,5 +9,11 @@
   gather_facts: true  
   
   tasks:
-    - debug: var=vars
-    - debug: var=hostvars[inventory_hostname]
+ #   - debug: var=vars
+ #   - debug: var=hostvars[inventory_hostname]
+ 
+    - setup:
+      gather_subset:
+      - '!all'
+      - '!any'
+      - facter
