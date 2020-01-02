@@ -31,6 +31,6 @@
           timeout: 60
 
         - name: install epel-release
-           yum:
-             name: epel-release
-             state: latest
+          yum:
+          name: epel-release
+          state: latest
