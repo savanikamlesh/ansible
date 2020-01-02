@@ -5,6 +5,7 @@
 
   - debug:
       var: hostvars[inventory_hostname]
+      
 
 - hosts: all
   gather_facts: yes
@@ -12,3 +13,4 @@
 
   - debug:
       var: hostvars[inventory_hostname]
+ - debug: var=ansible_distribution
