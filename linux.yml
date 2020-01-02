@@ -29,8 +29,3 @@
           sleep: 5
           delay: 5
           timeout: 60
-
-      - name: install epel-release
-          yum:
-          name: epel-release
-          state: latest
