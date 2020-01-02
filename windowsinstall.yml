@@ -6,55 +6,9 @@
 
 - name:  Windows Update
   hosts: all
-  gather_facts: true
-  pre_tasks:
-    - setup:
-        gather_subset: 'all'
+  gather_facts: true      
  tasks:
-    - name: Install Firefox
-      win_chocolatey:
-        name: 
-        - firefox
-        - procexp
-        - windirstat
-        - javaruntime
-        - googlechrome
-        - vcredist140
-        - autohotkey.portable
-        - ccleaner
-        - winlogbeat
-        - malwarebytes
-        - autoruns
-        - keepass.install
-        - wsus-offline-update
-        - angryip
-        - advanced-ip-scanner
-        - nmap
-        - wakemeonlan
-        - chocolatey-core.extension
-        - vcredist140
-        - winlogbeat
-        - winscp
-        - chocolateygui
-        - microsoft-teams.install
-        - visualstudio2019community
-        - office365business
-        state: present
-        
-    #  - name: ensure mobatek is installed via win_package
-     # win_get_url:
-      #  url: https://download.mobatek.net/1242019111120613/MobaXterm_Installer_v12.4.zip
-       # dest: C:\
-    
-    #- name: Unarchives the zip file
-     # win_unzip:
-      #  src: C:\MobaXterm_Installer_v12.4.zip
-       # dest: C:\temp
-        #recurse: yes
-        #delete_archive: yes
-      
-    - name: mobatek the zip file 
-      win_package:
-        path: C:\temp\MobaXterm_installer_12.4.msi
-        state: present
-  
+  - setup:
+    register: ansible_facts
+  - debug: item
+    with_dict: ansible_facts
