@@ -8,12 +8,10 @@
   hosts: all
   gather_facts: true  
   
-  pre_tasks:
-      setup:
-      gather_subset: 'all'
-  
-
   tasks:
     - debug: var=vars
     - debug: var=hostvars[inventory_hostname]
-    
+  
+-name: Printing Facts Mate?
+      setup:
+      gather_subset: 'all'
