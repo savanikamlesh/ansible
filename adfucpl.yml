@@ -1,5 +1,4 @@
-
-  ---
+---
   - name: Set static IP address
   win_shell: "(new-netipaddress -InterfaceAlias Ethernet -IPAddress {{ dc_address }} -prefixlength {{dc_netmask_cidr}} -defaultgateway {{ dc_gateway }})"
   delegate_to: '{{ temp_address }}'  
